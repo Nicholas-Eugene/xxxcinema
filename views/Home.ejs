@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>XXX Cinema</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat|Sofia">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="icon" href="image/Logo.png">
+</head>
+<body>
+    <header>    
+        <img src="image/Logo.png">
+        <nav>
+            <ul>
+                <li id="home"><a href="/">HOME</a></li>
+                <li>
+                    <a href="#">MOVIES &#9660;</a>
+                    <ul class="submenu">
+                        <li><a href="#page2">Showing</a></li>
+                        <li><a href="#page3">Upcoming</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">CINEMAS &#9660;</a>
+                    <ul class="submenu">
+                        <li><a href="#">Jakarta</a></li>
+                        <li><a href="#">London</a></li>
+                        <li><a href="#">Africa</a></li>
+                        <li><a href="#">Papua</a></li>
+                        <li><a href="#">Malaysia</a></li>
+                    </ul>
+                </li>               
+                <li><a href="#page3">MEMBERSHIP</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Movies or Cinemas">
+            <button type="submit">Search</button>
+        </div>
+        <div class="user-container">
+            <a href="#" id="user-button">
+                <img src="image/user.png" alt="User">
+            </a>
+            <div class="user-dropdown" id="login-dropdown">
+                <a href="/login">Log In</a>
+            </div>
+        </div>
+    </header>   
+
+    <main>
+        <section id="page1">
+            <div class="slide" id="slide1">
+                <a href="#slide2"><span class="material-symbols-outlined arrow" id="arrowright">expand_more</span></a>
+            </div>
+
+            <div class="slide" id="slide2">
+                <a href="#slide1"><span class="material-symbols-outlined arrow" id="arrowleft">expand_more</span></a>
+                <a href="#slide3"><span class="material-symbols-outlined arrow" id="arrowright">expand_more</span></a>
+            </div>
+
+            <div class="slide" id="slide3">
+                <a href="#slide2"><span class="material-symbols-outlined arrow" id="arrowleft">expand_more</span></a>
+                <a href="#slide4"><span class="material-symbols-outlined arrow" id="arrowright">expand_more</span></a>
+            </div>
+
+            <div class="slide" id="slide4">
+                <a href="#slide3"><span class="material-symbols-outlined arrow" id="arrowleft">expand_more</span></a>
+            </div>
+        </section>
+
+        <div id="popup" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/dune3.jpg" alt="Film Image">
+            <p id="popupText">
+                Paul Atreides, a brilliant and gifted young man born into a great destiny beyond his understanding, must travel to the most dangerous planet in the universe to ensure the future of his family and his people. As malevolent forces explode into conflict over the planet's exclusive supply of the most precious resource in existence, only those who can conquer their own fear will survive.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/n9xhJrPXop4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+        <div id="popup1" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/endgame.png"alt="Film Image">
+            <p id="popupText">
+                Adrift in space with no food or water, Tony Stark sends a message to Pepper Potts as his oxygen supply starts to dwindle. Meanwhile, the remaining Avengers -- Thor, Black Widow, Captain America and Bruce Banner -- must figure out a way to bring back their vanquished allies for an epic showdown with Thanos -- the evil demigod who decimated the planet and the universe.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TcMBFSGVi1c?si=subpHGDW-01Odwzd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        
+        <div id="popup2" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/godz.jpg"alt="Film Image">
+            <p id="popupText">
+                Kong and his protectors undertake a perilous journey to find his true home. Along for the ride is Jia, an orphaned girl who has a unique and powerful bond with the mighty beast. However, they soon find themselves in the path of an enraged Godzilla as he cuts a swath of destruction across the globe. The initial confrontation between the two titans -- instigated by unseen forces -- is only the beginning of the mystery that lies deep within the core of the planet.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/odM92ap8_c0?si=KDH0SvHPzrnwigQa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup3" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/killer.jpg"alt="Film Image">
+            <p id="popupText">
+                American submarine Captain Joe Glass is on the hunt for a U.S. sub in distress in the Arctic Ocean. He soon learns that a secret Russian coup is in the offing, a conspiracy that threatens to dismantle the world order. With crew and country on the line, Glass must assemble an elite group of Navy SEALs to sneak through enemy waters, rescue the kidnapped Russian president and prevent World War III.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/mnP_z3qXDCQ?si=959f-4yQUk9ZzTwS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup4" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/conjuring.jpg"alt="Film Image">
+            <p id="popupText">
+                In 1970, paranormal investigators and demonologists Lorraine (Vera Farmiga) and Ed (Patrick Wilson) Warren are summoned to the home of Carolyn (Lili Taylor) and Roger (Ron Livingston) Perron. The Perrons and their five daughters have recently moved into a secluded farmhouse, where a supernatural presence has made itself known. Though the manifestations are relatively benign at first, events soon escalate in horrifying fashion, especially after the Warrens discover the house's macabre history.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k10ETZ41q5o?si=Ihim00RSgCRFVMAT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup5" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/themeg.jpg"alt="Film Image">
+            <p id="popupText">
+                Jonas Taylor leads a research team on an exploratory dive into the deepest depths of the ocean. Their voyage spirals into chaos when a malevolent mining operation threatens their mission and forces them into a high-stakes battle for survival. Pitted against colossal, prehistoric sharks and relentless environmental plunderers, they must outrun, outsmart and outswim their merciless predators.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dG91B3hHyY4?si=LhSYZHCbWISow7Cv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup6" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/who2.jpg"alt="Film Image">
+            <p id="popupText">
+                Benjamin's loner existence is up-ended when the computer whiz joins a subversive hacker group. He soon finds himself going from nobody to Europe's most wanted when the group's activities draw the attention of the authorities.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/5vnjheCqRIs?si=QIcLXppaC_xK5bPi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup7" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/opp2.jpg"alt="Film Image">
+            <p id="popupText">
+                During World War II, Lt. Gen. Leslie Groves Jr. appoints physicist J. Robert Oppenheimer to work on the top-secret Manhattan Project. Oppenheimer and a team of scientists spend years developing and designing the atomic bomb. Their work comes to fruition on July 16, 1945, as they witness the world's first nuclear explosion, forever changing the course of history.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bK6ldnjE3Y0?si=KMARkkd75vanlIUb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup8" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/battle2.jpg"alt="Film Image">
+            <p id="popupText">
+                42 9th graders are sent to a deserted island. They are given a map, food, and various weapons. An explosive collar is fitted around their neck. If they break a rule, the collar explodes. Their mission: kill each other and be the last one standing. The last survivor is allowed to leave the island. If there is more than one survivor, the collars explode and kill them all.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/N0p1t-dC7Ko?si=ctNLlAmFL3OhWqG7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <div id="popup9" class="popup" style="display: none">
+            <h2>Informasi Film</h2>
+            <img src="image/john3.jpg"alt="Film Image">
+            <p id="popupText">
+                With the price on his head ever increasing, legendary hit man John Wick takes his fight against the High Table global as he seeks out the most powerful players in the underworld, from New York to Paris to Japan to Berlin.
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qEVUtrk8_B4?si=DPGzB44JS76AG4AH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+          
+
+        <section id="page2">
+            <div id="title2">
+            <h3>Choose Your Movie</h3>    
+            <h4 style="font-size: smaller;">Now Showing</h4>
+            </div>
+
+            <div id="movieSlider">
+                <div class="movieArrow" id="prevMovie"><span class="material-symbols-outlined">keyboard_arrow_left</span></div>
+                <div class="movieArrow" id="nextMovie"><span class="material-symbols-outlined">keyboard_arrow_right</span></div>
+
+                <div class="movieCard">
+                    <img src="image/dune2.jpg" alt="Movie 1" class="moviePoster">
+                    <div class="movieTitle">DUNE</div>
+                    <a href="/SeatDune"><button class="bookNowButton">Book Now</button></a>
+                </div>
+                <div class="movieCard">
+                    <img src="image/endgame.png" alt="Movie 2" class="moviePoster">
+                    <div class="movieTitle">Avengers: Endgame</div>
+                    <a href="/SeatEndgame"><button class="bookNowButton">Book Now</button></a>
+                </div>
+                <div class="movieCard">
+                    <img src="image/godz.jpg" alt="Movie 3" class="moviePoster">
+                    <div class="movieTitle">Godzilla vs Kong</div>
+                    <a href="/SeatGodz"><button class="bookNowButton">Book Now</button></a>
+                </div>
+                <div class="movieCard">
+                    <img src="image/killer.jpg" alt="Movie 4" class="moviePoster">
+                    <div class="movieTitle">Hunter Killer</div>
+                    <a href="/SeatHunter"><button class="bookNowButton">Book Now</button></a>
+                </div>
+                <div class="movieCard">
+                    <img src="image/conjuring.jpg" alt="Movie 5" class="moviePoster">
+                    <div class="movieTitle">The Conjuring</div>
+                    <a href="/SeatConjuring"><button class="bookNowButton">Book Now</button></a>
+                </div>
+                <div class="movieCard">
+                    <img src="image/themeg.jpg" alt="Movie 6" class="moviePoster">
+                    <div class="movieTitle">Meg 2: The Trench</div>
+                    <a href="/SeatMeg"><button class="bookNowButton">Book Now</button></a>
+                </div>
+            </div>   
+
+        </section>
+
+
+        <section id="page3">
+            <div id="title3">
+            <h3>Upcoming</h3>    
+            </div>
+
+            <div id="movieSlider2">
+                <div class="movieCard2">
+                    <img src="image/who.jpg" alt="Movie 7" class="moviePoster2">
+                    <div class="movieTitle">WHO AM I</div>
+                </div>
+                <div class="movieCard2">
+                    <img src="image/opp.jpg" alt="Movie 8" class="moviePoster2">
+                    <div class="movieTitle">Oppenheimer</div>
+                </div>
+                <div class="movieCard2">
+                    <img src="image/battle.jpg" alt="Movie 9" class="moviePoster2">
+                    <div class="movieTitle">Battle Royale</div>
+                </div>
+                <div class="movieCard2">
+                    <img src="image/john.jpg" alt="Movie 10" class="moviePoster2">
+                    <div class="movieTitle">John Wick: Chapter 4</div>
+                </div>
+            </div>   
+
+        </section>
+
+
+        <section id="page4">
+            <div id="title4">
+                <h3>Get Membership</h3>
+
+            <section id="membership">
+                <div id="membershipForm">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required>
+                        </div>
+                        <button type="submit" class="submit-button">Submit</button>
+                    </form>
+                </div>
+            </section>
+        </section>
+
+        </section>
+    </main>
+
+
+    <script src="index.js"></script>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <a href="#"><img src="image/facebook.png" alt="Facebook" class="logo-social-media"></a>
+                <a href="#"><img src="image/X.png" alt="Twitter" class="logo-social-media"></a>
+                <a href="#"><img src="image/instagram.png" alt="Instagram" class="logo-social-media"></a>
+            </div>
+            <div class="about">
+                <h3>About XXX Cinemas</h3>
+                <p>Discover the essence of cinematic bliss at XXX Cinemas. With cutting-edge facilities and a passion for film, we're committed to delivering unparalleled entertainment. Join us for an unforgettable movie experience that transcends the ordinary</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#page2">Movies</a></li>
+                    <li><a href="#">Cinemas</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#page3">Membership</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 XXX Cinemas. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    
+</body>
+</html>
