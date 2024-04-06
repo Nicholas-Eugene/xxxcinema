@@ -4,6 +4,10 @@ const app = express();
 const bcrypt = require('bcrypt');
 const port = 3000;
 const collection = require("./mongo");
+const flash = require('connect-flash');
+const session = require('express-session');
+
+app.use(flash())
 
 app.use(express.json()); 
 
@@ -13,17 +17,22 @@ app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 
+app.use(session({
+  secret: 'supanika',
+  resave: false,
+  saveUninitialized: true
+}));
 /*
 app.get('/login', (req, res) => {
     res.render('Login');
 })
 */
 app.get('/Signup', (req, res) => {
-  res.render('Signup', );
+  res.render('Signup',{messages: req.flash()} );
 })
 
 app.get('/Signin', (req, res) => {
-  res.render('Signin');
+  res.render('Signin', {messages: req.flash()});
 })
 
 app.get('/', (req,res) => {
@@ -41,7 +50,8 @@ app.post("/Signup", async (req, res) => {
 
     const existingUser = await collection.findOne({name});
     if (existingUser) {
-      return res.status(500).send('Username already exist');
+      req.flash('error', 'A user with that username already exists');
+      return res.redirect('/Signup');
     }
 
     const saltRounds = 10;
@@ -66,12 +76,14 @@ app.post("/Signin", async (req, res) => {
   try {
     const user = await collection.findOne({ name: req.body.username });
     if (!user) {
-      return res.status(500).send('User does not exist');
+      req.flash('error', 'Username does not exist');
+      return res.redirect('/Signin');
     }
 
     const isPasswordMatch = await bcrypt.compare(req.body.password, user.password);
     if (!isPasswordMatch) {
-      return res.status(500).send('Password Wrong');
+      req.flash('error', 'Your password is incorrect, please try again');
+      return res.redirect('/Signin');
     }
     
     res.redirect('/');
@@ -101,5 +113,5 @@ app.get('/SeatMeg', (req,res) => {
 })
 
 app.listen(port,() => {
-    console.log('Server running at http://localhost: ${port}');
+    console.log(`Server running at http://localhost:${port}`);
 })

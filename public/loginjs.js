@@ -21,8 +21,7 @@ sign_in_btn2.addEventListener("click", () => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Kode JavaScript Anda di sini
-    // AJAX request for sign up
+
 document.querySelector('.sign-up-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const formData = new FormData(this);
@@ -31,10 +30,10 @@ document.querySelector('.sign-up-form').addEventListener('submit', async functio
         body: formData
     });
     const result = await response.text();
-    alert(result); // Show response to user (e.g., "User created successfully")
+    alert(result); 
 });
 
-// AJAX request for sign in
+
 document.querySelector('.sign-in-form').addEventListener('submit', async function(e) {
     e.preventDefault();
     const formData = new FormData(this);
@@ -43,7 +42,7 @@ document.querySelector('.sign-in-form').addEventListener('submit', async functio
         body: formData
     });
     const result = await response.text();
-    alert(result); // Show response to user (e.g., "Login successful")
-    // Redirect user to home page or handle as needed
+    alert(result);
+    
 });
 });
