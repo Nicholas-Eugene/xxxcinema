@@ -411,7 +411,7 @@ input{
 
   .popup .content .ticket .tic .tic_details{
     position: relative;
-    background: url(image/cinema2.jpg)no-repeat center -200px /cover;
+    background: url(/image/cinema2.jpg)no-repeat center -200px /cover;
   }
 
   .popup .content .ticket .tic .tic_details::before {
