@@ -35,9 +35,9 @@ app.get('/Signin', (req, res) => {
   res.render('Signin', {messages: req.flash()});
 })
 
-app.get('/', (req,res) => {
-  res.render('home');
-})
+app.get('/', (req, res) => {
+  res.render('home', { userLoggedIn: req.session.userLoggedIn });
+});
 
 app.post("/Signup", async (req, res) => {
   try {
@@ -85,6 +85,8 @@ app.post("/Signin", async (req, res) => {
       req.flash('error', 'Your password is incorrect, please try again');
       return res.redirect('/Signin');
     }
+
+    req.session.userLoggedIn = true;
     
     res.redirect('/');
   } catch (error) {
@@ -92,6 +94,21 @@ app.post("/Signin", async (req, res) => {
     res.status(500).send('Internal server error');
   }
 });
+
+app.get('/logout', (req, res) => {
+  // Hapus properti userLoggedIn dari session saat logout
+  req.session.userLoggedIn = false;
+  
+  req.session.destroy((err) => {
+    if (err) {
+      console.error('Error logging out:', err);
+      res.status(500).send('Internal server error');
+    } else {
+      res.redirect('/');
+    }
+  });
+});
+
 
 app.get('/SeatConjuring', (req,res) => {
     res.render('SeatConjuring');

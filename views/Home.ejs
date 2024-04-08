@@ -48,7 +48,11 @@
                 <img src="/image/user.png" alt="User">
             </a>
             <div class="user-dropdown" id="login-dropdown">
-                <a href="Signin">Log in</a>
+                <% if (userLoggedIn) { %>
+                    <a href="/logout">Log out</a>
+                <% } else { %>
+                    <a href="/Signin">Log in</a>
+                <% } %>
             </div>
         </div>
     </header>   
