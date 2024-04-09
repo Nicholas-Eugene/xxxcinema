@@ -218,3 +218,7 @@ const initSlider = () => {
 }
 window.addEventListener("resize", initSlider);
 window.addEventListener("load", initSlider);
+
+function showAlert() {
+    alert("Please log in first");
+}

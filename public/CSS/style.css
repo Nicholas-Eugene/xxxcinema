@@ -141,13 +141,13 @@ header nav ul li a {
 
 .user-container img {
     height: auto;
-    width: 120px;
+    width: 150px;
     cursor: pointer;
-    margin-left: 450px;    
+    margin-left: 370px; 
 }
 
 .user-container img:hover {
-    filter: brightness(80%);
+    filter: brightness(70%);
 }
 
 .user-container {
@@ -164,7 +164,7 @@ header nav ul li a {
     border: 1px solid #ccc;
     border-radius: 4px;
     padding: 10px;
-    margin-right:270px;
+    margin-right:280px;
     z-index: 999; 
 }
 
