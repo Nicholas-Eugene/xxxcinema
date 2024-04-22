@@ -49,11 +49,17 @@
             </a>
             <div class="user-dropdown" id="login-dropdown">
                 <% if (userLoggedIn) { %>
-                    <a href="/logout">Log out</a>
+                    <div class="user-greeting">
+                        <span>Hello, <%= username %> </span>
+                    </div>
+                    <a href="/logout" class="btn">Log out</a>
                 <% } else { %>
-                    <a href="/Signin">Log in</a>
+                    <div class="user-greeting">
+                        <span>Hello, Guest</span>
+                    </div>
+                    <a href="/Signin" class="btn">Log in</a>
                 <% } %>
-            </div>
+            </div>                       
         </div>
     </header>   
 

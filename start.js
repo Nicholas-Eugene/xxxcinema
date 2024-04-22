@@ -36,7 +36,10 @@ app.get('/Signin', (req, res) => {
 })
 
 app.get('/', (req, res) => {
-  res.render('home', { userLoggedIn: req.session.userLoggedIn });
+  res.render('home', { 
+    userLoggedIn: req.session.userLoggedIn,
+    username: req.session.username
+  });
 });
 
 app.post("/Signup", async (req, res) => {
@@ -85,6 +88,8 @@ app.post("/Signin", async (req, res) => {
       req.flash('error', 'Your password is incorrect, please try again');
       return res.redirect('/Signin');
     }
+
+    req.session.username = req.body.username;
 
     req.session.userLoggedIn = true;
     

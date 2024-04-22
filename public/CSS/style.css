@@ -169,11 +169,13 @@ header nav ul li a {
 }
 
 .user-dropdown a {
-        background-color: white;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        color: black;
-        z-index: 999;
-    }
+    background-color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: black;
+    z-index: 999;
+}
+
+
 .user-dropdown a:hover {
     background-color: #f5f5f5;
 }
